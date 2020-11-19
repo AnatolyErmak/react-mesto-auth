@@ -1,0 +1,45 @@
+.popup__button {
+  width: 358px;
+  background: #000000;
+  border: none;
+  border-radius: 2px;
+  color: white;
+  
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  min-height: 50px;
+}
+
+.popup__save-btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.popup__save-btn_inactive {
+  background: white;
+  opacity: 0.2;
+  color: black;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+}
+
+.popup__button_delete {
+  margin: 0px;
+}
+
+.popup__button_form {
+  margin: 23px auto 36px;
+}
+@media screen and (max-width: 580px) {
+  .popup__save-btn {
+    max-width: 50vw;
+  }
+  .popup__button_delete {
+    max-width: 50vw;
+  }
+  .popup__button_form {
+    max-width: 50vw;
+  }
+}

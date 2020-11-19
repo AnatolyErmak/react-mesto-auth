@@ -1,0 +1,6 @@
+.element__description {
+  display: flex;
+  justify-content: space-around;
+  background: #ffffff;
+  
+}
