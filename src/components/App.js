@@ -9,6 +9,10 @@ import AddPlacePopup from "./AddPlacePopup";
 import EditProfilePopup from "./EditProfilePopup";
 import EditAvatarPopup from "./EditAvatarPopup ";
 import Login from './Login';
+import Register from './Register';
+import ProtectedRoute from './ProtectedRoute';
+import InfoTooltip from './InfoTooltip';
+
 
 function App() {
   // переменные состояния
@@ -21,6 +25,8 @@ function App() {
     link: "",
     name: "",
   });
+
+  const [error, setError] = React.useState(false);
 
   // функция закрытия попапов
   function closeAllPopups() {
@@ -151,7 +157,7 @@ function App() {
     <CurrentUserContext.Provider value={currentUser}>
       <div className="page">
         <Header />
-        <Main
+ {/*        <Main
           onCardDelete={handleCardDelete}
           onEditAvatar={handleEditAvatarClick}
           onEditProfile={handleEditProfileClick}
@@ -160,8 +166,9 @@ function App() {
           onCardLike={handleCardLike}
           onCardDislike={handleCardDislike}
           cards={cards}
-        />
-        <Login/>
+        /> */}
+     {/*    <Login/>
+        <Register/> */}
         <Footer />
         <EditAvatarPopup
           onUpdateAvatar={handleUpdateAvatar}
@@ -187,6 +194,13 @@ function App() {
           name={selectedCard.name}
           link={selectedCard.link}
         />
+
+        <InfoTooltip
+            isOpen={isAddCardOpen}
+            onClose={closeAllPopups}
+            isError={error}
+          >
+        </InfoTooltip>
       </div>
     </CurrentUserContext.Provider>
   );

@@ -28,7 +28,7 @@ function Login(props) {
     <form className="login" onSubmit={handleSubmit} >
             <h3 className="popup__title login__title">Вход</h3>
             <input
-                className="popup__input login__input"
+                className="popup__field login__input"
                 name="userEmail"
                 type="email"
                 placeholder="Email"
@@ -37,7 +37,7 @@ function Login(props) {
                 required
             />
             <input
-                className="popup__input login__input"
+                className="popup__field login__input"
                 name="userPassword"
                 type="password"
                 placeholder="Пароль"
